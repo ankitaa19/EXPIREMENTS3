@@ -1,0 +1,133 @@
+<!-- Develop a webpage with rollovers effect and implemet menus, status bars, lideshow, banner and web page protection -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Webpage</title>
+    <style>
+        /* Styles for menu */
+        h1 {
+            text-align: center;
+            text-shadow: #333;
+            font-style: italic;
+        }
+
+        ul.menu {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #333;
+        }
+
+        ul.menu li {
+            float: left;
+        }
+
+        ul.menu li a {
+            display: block;
+            color: rgb(243, 183, 183);
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        ul.menu li a:hover {
+            background-color: #111;
+        }
+
+        /* Style for slideshow */
+        .slideshow-container {
+            width: 100%;
+            position: relative;
+            margin: auto;
+            padding: 20px;
+        }
+
+        .mySlides {
+            display: none;
+            width: calc(100% / 3);
+            float: left;
+        }
+
+        /* Style for banner */
+        .banner {
+            width: 100%;
+            height: 150px;
+            background-image: url('banner.jpg');
+            background-size: cover;
+            text-align: center;
+            color: rgb(239, 178, 178);
+            font-size: 24px;
+            line-height: 150px;
+        }
+
+        /* Style for validation container */
+        .validation-container {
+            width: 40%;
+            float: left;
+            max-width: 300px; /* Limit the width to prevent overflowing */
+            padding: 20px;
+            box-sizing: border-box; /* Include padding and border in the element's total width and height */
+        }
+
+        /* Disable right-click */
+        body {
+            pointer-events: none;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Menu -->
+<h1>Glossyy Glowww💅✨</h1>
+<ul class="menu">
+    <li><a href="#">Home</a></li>
+    <li><a href="#">About</a></li>
+    <li><a href="#">Services</a></li>
+    <li><a href="#">Contact</a></li>
+</ul>
+
+<!-- Banner -->
+
+
+<!-- Slideshow -->
+<div class="slideshow-container">
+    <div class="mySlides">
+        <img src="https://i.pinimg.com/564x/96/68/9d/96689d11401f58f1b567247bab8df643.jpg" style="width:100%">
+    </div>
+    <div class="mySlides">
+        <img src="https://i.pinimg.com/564x/a7/b1/61/a7b1615d579f31955c31afb4c9b5cbee.jpg" style="width:100%">
+    </div>
+    <div class="mySlides">
+        <img src="https://i.pinimg.com/736x/b5/00/52/b50052ae5690b5035be921fb47f1b952.jpg" style="width:100%">
+    </div>
+</div>
+
+
+
+<!-- JavaScript for Slideshow -->
+<script>
+    var slideIndex = 0;
+    showSlides();
+
+    function showSlides() {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        slideIndex++;
+        if (slideIndex > slides.length) {slideIndex = 1}
+        slides[slideIndex-1].style.display = "block";
+        setTimeout(showSlides, 2000); 
+    }
+</script>
+
+
+
+
+</body>
+</html>
